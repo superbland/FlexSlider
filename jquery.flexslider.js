@@ -442,6 +442,8 @@
                   }
                   slider.setProps(offset + dx, "setTouch");
                 }
+              } else {
+                  el.removeEventListener('touchmove', onTouchMove, false);
               }
             }
 
@@ -525,6 +527,8 @@
                         }
                         slider.setProps(offset + dx, "setTouch");
                     }
+                } else {
+                  el.removeEventListener("MSGestureChange", onMSGestureChange, false);
                 }
             }
 
